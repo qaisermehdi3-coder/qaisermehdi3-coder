@@ -8,4 +8,4 @@ I measure what LLM inference actually costs, down to the GPU.
 - **Proposed in AgentMeasure, [#26](https://github.com/roy-tong/AgentMeasure/discussions/26)**: self-hosted servers as a known measurement limit, with the server-side way to close it, tested live.
 - **[Cost audit](https://github.com/qaisermehdi3-coder/qvunex/blob/main/AUDIT.md)**: I run the meter on a day of your traffic and write up where the money goes.
 
-Contact: open an issue on [qvunex](https://github.com/qaisermehdi3-coder/qvunex/issues).
+Contact: qvunexaudit@gmail.com, or open an issue on [qvunex](https://github.com/qaisermehdi3-coder/qvunex/issues).
