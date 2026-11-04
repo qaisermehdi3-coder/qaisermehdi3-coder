@@ -8,6 +8,7 @@ I measure what LLM inference actually costs, down to the GPU.
 - **Two vLLM servers on one GPU, measured**: an embedding model next to a chat model on one RTX 3090, with the startup error, the fix and the slowdown when both are busy. [Data](https://github.com/qaisermehdi3-coder/qvunex/tree/main/benchmarks/data/coloc-3090-2026-10-23), written up in [vllm#60599](https://github.com/vllm-project/vllm/issues/60599).
 - **Reported in pydantic-ai, [#8704](https://github.com/pydantic/pydantic-ai/issues/8704)**: responses with no usage were recorded as $0 and slipped past spending limits. Fixed by the maintainers in [#9491](https://github.com/pydantic/pydantic-ai/pull/9491).
 - **Merged in Verovo (formerly AgentMeasure), [#39](https://github.com/roy-tong/Verovo/pull/39)**: self-hosted servers as a known measurement limit, with the server-side way to close it, tested live. It now runs in their conformance checks.
+- - **Merged in Kedify otel-add-on, [#235](https://github.com/kedify/otel-add-on/pull/235) and [#236](https://github.com/kedify/otel-add-on/pull/236)**: fixed their vLLM autoscaling examples (a doubled metric prefix, and the KV-cache metric renamed in vLLM 0.10, with the image bumped to match).
 - **ROBOCO [token-forge v1.2.0](https://github.com/roboco-io/token-forge/releases/tag/v1.2.0)** measured and cut boot time after my report (7:57 to 4:48).
 - **[Cost audit](https://github.com/qaisermehdi3-coder/qvunex/blob/main/AUDIT.md)**: I run the meter on a day of your traffic and write up where the money goes.
 
