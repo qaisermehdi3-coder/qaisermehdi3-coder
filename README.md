@@ -2,6 +2,8 @@
 
 I measure what LLM inference actually costs, down to the GPU.
 
+**Try it:** [Which GPU is cheapest at your answer time?](https://qaisermehdi3-coder.github.io/qvunex/)
+
 - **[qvunex_single.py](https://github.com/qaisermehdi3-coder/qvunex/blob/main/qvunex_single.py)**: one file, no install, no network code. Records cost per finished task, and a call whose cost is unknown is marked unknown, never counted as $0. For self-hosted vLLM, `--reconcile` checks your client's counts against the server's own counters, and `--gpu-rate` gives the cost per request at the load you actually ran. Both tested live on vLLM.
 - **[GPU cost data](https://github.com/qaisermehdi3-coder/qvunex/tree/main/benchmarks/data)**: the same benchmark on T4, L4, L40S and RTX 3090, repeated. On one L40S, minutes apart, CUDA-graph timings repeated within 0.7% on average and eager timings moved up to 78%.
 - **[Which GPU is cheapest at your answer time](https://github.com/qaisermehdi3-coder/qvunex/tree/main/benchmarks/corpus)**: RTX 3090 vs A100 80GB on vLLM, same model and load. At the same load the 3090 was cheaper per token; at a 6-7 s answer time the A100 was about 4.6x cheaper. Data plus a one-file tool that picks the cheapest measured setup for your target.
